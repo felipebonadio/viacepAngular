@@ -17,7 +17,7 @@ export class HomePageComponent implements OnInit {
   }
 
   getCep(cep:string) {
-    this.router.navigate(["['/ceps', cep]"]);    
+    this.router.navigate(['ceps', cep]);    
   }
   
 }
