@@ -1,0 +1,22 @@
+<h2>Products</h2>
+
+<div *ngFor="let cep of ceps">
+
+<h3>
+<a [title]="cep.localidade + ' - ' + cep.uf ">
+{{ cep.localidade }}
+</a>
+<br>
+{{ cep.cep }}
+</h3>
+
+<p *ngIf="cep.logradouro">
+Endereço: {{ cep.logradouro }}
+</p>
+
+</div>
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
