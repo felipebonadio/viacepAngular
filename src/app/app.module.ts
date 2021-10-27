@@ -9,31 +9,16 @@ import { CepListComponent } from './cep-list/cep-list.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CepComponent } from './cep/cep.component';
 
-const routes: Routes = [
-  {
-    path: 'list',
-    component: CepListComponent,
-    children: [
-      {
-        path: 'ceps/:numeroCep',
-        component: CepComponent
-      }
-    ]
-  },
-  {
-    path: "",
-    redirectTo: 'home-page',
-    pathMatch: 'full'
-  }
-];
-
-
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-   [RouterModule.forRoot(routes)]],
-  exports: [RouterModule],
+    RouterModule.forRoot([
+      { path: '', component: HomePageComponent },
+      { path: 'list', component: CepListComponent},
+      { path: 'ceps/:numeroCep', component: CepComponent },
+    ])
+  ],
   declarations: [
     AppComponent,
     TopBarComponent,
@@ -46,6 +31,7 @@ const routes: Routes = [
   ]
 })
 export class AppModule { }
+
 
 
 /*
