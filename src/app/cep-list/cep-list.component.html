@@ -3,7 +3,7 @@
 <div *ngFor="let cep of ceps">
 
 <h3>
-<a [title]="cep.localidade + ' - ' + cep.uf ">
+<a [routerLink]="['/ceps', cep.cep]"[title]="cep.localidade + ' - ' + cep.uf ">
 {{ cep.localidade }}
 </a>
 <br>
