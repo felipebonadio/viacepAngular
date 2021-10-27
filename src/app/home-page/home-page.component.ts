@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Cep, ceps } from '../ceps';
 
 @Component({
@@ -11,11 +11,10 @@ export class HomePageComponent implements OnInit {
   cep : Cep | undefined;
 
   getCep(cep:string) {
-    const routeParams = this.route.snapshot.paramMap;
-    const numeroCepFromRoute = String(routeParams.get('numeroCep'));
-    this.cep = ceps.find(cep => cep.cep === numeroCepFromRoute);
+    this.router.navigate(["['/ceps', cep.cep]", { relativeTo: this.route }]);
+    
   }
-  constructor(private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
   }
