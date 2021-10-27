@@ -10,14 +10,14 @@ import { Cep, ceps } from '../ceps';
 export class HomePageComponent implements OnInit {
   cep : Cep | undefined;
 
-  getCep(cep:string) {
-    this.router.navigate(["['/ceps', cep.cep]", { relativeTo: this.route }]);
-    
-  }
+  
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
   }
 
+  getCep(cep:string) {
+    this.router.navigate(["['/ceps', cep]"]);    
+  }
   
 }
