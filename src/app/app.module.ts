@@ -22,7 +22,7 @@ const routes: Routes = [
   },
   {
     path: "",
-    redirectTo: '',
+    redirectTo: 'home-page',
     pathMatch: 'full'
   }
 ];
