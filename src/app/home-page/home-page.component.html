@@ -2,8 +2,6 @@
 
 <h2>Digite o Cep que gostaria de pesquisar</h2>
 
-<form action="/action_page.php" method="get">
-  <label for="cep">Cep</label>
-  <input type="text" id="inputCep" placeholder="Digite o cep" name="cep"><br><br>  
-  <input type="submit" value="Submit">
-</form>
+<p><input type="text" id="cep" name="cep" #cep></p>
+
+<button type="button" (click)="getCep(cep.value)">Clickme</button>
