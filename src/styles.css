@@ -8,16 +8,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 .rodape{
+  position:absolute;
+  bottom:0;
+  width:100%;
   display: grid;
   align-items: center;
   justify-items: center;  
   grid-template-columns: 25% 25% 25% 25%;
-}
-
-footer {
-  position:absolute;
-  bottom:0;
-  width:100%;
 }
 
 body {
