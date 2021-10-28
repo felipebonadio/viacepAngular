@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Cep, ceps } from '../ceps';
+import { Cep } from '../ceps';
 
 @Component({
   selector: 'app-home-page',
@@ -12,8 +12,6 @@ export class HomePageComponent {
   cep : Cep | undefined;
   
   constructor(private router: Router) { }
-
- 
 
   getCep(cep:string) {
     this.router.navigate(['ceps', cep]);    
