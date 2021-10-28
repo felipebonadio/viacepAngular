@@ -7,6 +7,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.rodape{
+  display: grid;
+  align-items: center;
+  justify-items: center;  
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+footer {
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
 
 body {
   margin: 0;
@@ -83,6 +95,8 @@ button {
   color: white;
   border: none;
 }
+
+
 
 .button:hover,
 button:hover {
